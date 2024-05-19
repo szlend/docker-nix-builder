@@ -1,0 +1,4 @@
+HostKey /mnt/server_id_ed25519
+AuthorizedKeysFile /mnt/client_id_ed25519.pub
+PasswordAuthentication no
+AuthorizedKeysFile .ssh/authorized_keys
