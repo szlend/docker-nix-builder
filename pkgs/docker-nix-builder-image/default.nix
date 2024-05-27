@@ -18,7 +18,7 @@ let
   }));
 
   busybox-sandbox-shell = pkgsLinux.busybox-sandbox-shell.override (lib.optionalAttrs isCross {
-    busybox = pkgsLinux.busybox;
+    busybox = pkgsLinux.busybox.override { useMusl = true; };
   });
 
   openssh = pkgsLinux.openssh.override (lib.optionalAttrs isCross {

@@ -37,33 +37,3 @@ resholve.mkDerivation rec {
     };
   };
 }
-
-
-
-
-
-
-
-
-# { packageShellApplication, coreutils, getconf, docker-nix-builder-image, scripts-common }:
-
-# packageShellApplication {
-#   name = "docker-nix-builder";
-#   src = ./src;
-
-#   env.IMAGE = docker-nix-builder-image;
-
-#   runtimeInputs = [
-#     coreutils
-#     getconf
-#   ];
-
-#   include."common.sh" = "${scripts-common}/common.sh";
-#   apps.docker-nix-builder = "docker-nix-builder.sh";
-
-#   resholve = {
-#     fake = {
-#       external = [ "docker" "ssh-keygen" ];
-#     };
-#   };
-# }
